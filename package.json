@@ -1,0 +1,13 @@
+{
+  "name": "firestore-alunos-crud",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CRUD de alunos no Firebase Cloud Firestore com menu no terminal",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^14.5.1"
+  }
+}
