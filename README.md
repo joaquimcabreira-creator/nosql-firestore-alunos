@@ -134,6 +134,21 @@ A opção `8` combina dois filtros em campos diferentes. Se o Firestore exibir u
 
 Use apenas dados fictícios, conforme a orientação da atividade.
 
+## 7. Como testar (aluno e professor)
+
+O programa usa uma **chave de serviço do Firebase**, que não deve ser publicada. Por isso o arquivo `serviceAccountKey.json` **não vem junto com o repositório**.
+
+- **Aluno:** o arquivo já está na pasta local do projeto. Basta rodar `npm start`.
+- **Professor ou qualquer outra pessoa:** para executar o código, é necessário ter acesso a um projeto Firebase com Firestore e gerar a **própria** chave de serviço:
+  1. Criar ou abrir um projeto no [Console do Firebase](https://console.firebase.google.com/) e habilitar o Cloud Firestore.
+  2. Acessar **Configurações do projeto > Contas de serviço** e gerar uma nova chave privada (JSON).
+  3. Salvar o JSON como `serviceAccountKey.json` na raiz deste projeto.
+  4. Rodar `npm install` e `npm start`.
+
+Sem a chave, a aplicação exibe uma mensagem orientativa e não inicia — isso é esperado e comprova que a credencial não foi exposta no GitHub.
+
+A avaliação também pode ser feita apenas pelo código-fonte e pelos prints da pasta `capturas/`, sem necessidade de executar a aplicação.
+
 ## Estrutura do projeto
 
 ```text
